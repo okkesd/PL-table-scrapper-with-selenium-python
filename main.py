@@ -30,7 +30,8 @@ time.sleep(3)
 # and use it to create the file
 try:
     week = driver.find_element(by="xpath", value='//*[@id="sports-app"]/div/div[1]/div/div/div[2]/span').text
-    filename = week[4:]
+    print(week)
+    filename = week[4:6]
 
 except:
     week = datetime.today().strftime("%B %d, %Y") # Month Day Year format
@@ -74,7 +75,7 @@ fig, ax1 = plt.subplots(figsize=(11, 7))
 bars = ax1.bar(teams, points, color=['blue', 'blue', 'blue', 'blue', 'orange'] + ['gray'] * (len(teams) - 8) + ["red"] * 3)
 plt.xlabel("Teams", fontsize=16, labelpad=12)
 plt.ylabel("Points", fontsize=16, labelpad=12)
-plt.title("Premier Leauge (" + str(week) + ")", fontsize=14, pad=14, fontweight="bold")
+plt.title("Premier Leauge (" + str(week[4:]) + ")", fontsize=14, pad=14, fontweight="bold")
 plt.xticks(rotation=90, ha='right')
 plt.subplots_adjust(bottom=0.3)
 
