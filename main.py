@@ -37,16 +37,18 @@ except:
     week = datetime.today().strftime("%B %d, %Y") # Month Day Year format
     filename = week[:11]
 
-# Click to the table button
-driver.find_element(by="xpath", value='//*[@id="sports-app"]/div/div[2]/div/div/div/ol/li[3]').click()
+# Get to the table page
+driver.get("https://www.google.com/search?q=pl&oq=pl&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMgwIARAuGCcYgAQYigUyBggCEEUYQDIGCAMQRRg7MgYIBBBFGD0yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQc1OTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#cobssid=s&sie=lg;/g/11sk7gnh6c;2;/m/02_tc;st;fp;1;;;")
 time.sleep(3)
 
 # Get the names and points and add them to arrays
 template = '//*[@id="liveresults-sports-immersive__league-fullpage"]/div/div[2]/div[2]/div/div/div/div[3]/div/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/table/tbody'
+# //*[@id="liveresults-sports-immersive__league-fullpage"]/div/div[2]/div[2]/div/div/div/div[3]/div/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/table/tbody/tr[4]/td[2]/div[3]/span/img
 i = 0
 team_number = 20
 teams = []
 points = []
+logos = []
 
 while i < team_number:
 
