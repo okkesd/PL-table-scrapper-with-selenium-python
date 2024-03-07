@@ -78,7 +78,7 @@ bars = ax1.bar(teams, points, color=['blue', 'blue', 'blue', 'blue', 'orange'] +
 plt.xlabel("Teams", fontsize=16, labelpad=12)
 plt.ylabel("Points", fontsize=16, labelpad=12)
 plt.title("Premier Leauge (" + str(week[4:]) + ")", fontsize=14, pad=14, fontweight="bold")
-plt.xticks(rotation=90, ha='right')
+plt.xticks(rotation=90, ha='center')
 plt.subplots_adjust(bottom=0.3)
 
 # Write the points of the first three teams
